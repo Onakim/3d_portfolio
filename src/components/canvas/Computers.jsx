@@ -33,7 +33,7 @@ const ComputersCanvas = () => {
   useEffect(() => {
     const mediaQuery = window.matchMedia("(max-width: 500px)");
     setIsMobile(mediaQuery.matches);
-    const handleMediaQueryChange = (even) => {
+    const handleMediaQueryChange = (event) => {
       setIsMobile(event.matches);
     };
     mediaQuery.addEventListener("change", handleMediaQueryChange);
@@ -43,7 +43,7 @@ const ComputersCanvas = () => {
   }, []);
   return (
     <Canvas
-      frameLoop="demand"
+      frameloop="demand"
       shadows
       camera={{ position: [20, 3, 5], fov: 25 }}
       gl={{ preserveDrawingBuffer: true }}
